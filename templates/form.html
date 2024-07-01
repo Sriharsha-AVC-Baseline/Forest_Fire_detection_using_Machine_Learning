@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <style>
+        .frms{
+            padding-left: 44%;
+            width: 300px;
+            height: 300px;
+        }
+        #imgt{
+            width: 240px;
+            height: 40px;
+
+            font-weight: bolder;
+            
+        }
+        #submt{
+            width: 100px;
+            height: 30px;
+            font-weight: bolder;
+            border-radius: 4%;
+            background-color: rgb(157, 239, 150);
+            color: rgb(13, 20, 20);
+        }
+      </style>
+    </head>
+    <body background="2.webp">
+    <h1 style="text-align: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Upload the image</h1>
+    <div class="frms">
+        <form  method='post' enctype='multipart/form-data' action="submit">
+            <input type="file" name="img" id="imgt">
+            <br>
+            <br>
+            <br>
+            <input type="submit" name="submit" id="submt" value="Upload">
+    </form>
+</div>
+    </body>
+</html>

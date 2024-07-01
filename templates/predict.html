@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+    <style>
+        .head{
+            font-family:sans-serif;
+            color: rgb(37, 30, 13);
+        }
+
+        .mid{
+            font-family:sans-serif;
+            color: rgb(15, 12, 6);
+        }
+        .frms{
+            display: flex;
+            justify-content: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-style: italic;
+            background-color: rgba(255, 255, 255, 0.086);
+            backdrop-filter: sepia(100%);
+            margin-left: 35%;
+            margin-right: 35%;
+            font-size: larger;
+        }
+        input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+        }
+        input[type=submit]{
+            width: 100%;
+            height: 15%;
+            padding: 10px 15px;
+            background-color: rgb(188, 243, 26);
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+            font-size:medium;
+            border-radius: 8px;
+        }
+        </style>
+    </head>
+    <body background="{{url_for('static',filename='2.webp')}}">
+        <div class="head">
+        <h1 style="text-align: center;">Forest Fire Prediction</h1>
+        </div>
+        <div class="mid">
+            <h2 style="text-align: center;">Enter the Temprature , Humidty and oxygen value</h2>
+        </div>
+        <br>
+        <div class="frms">
+            <br>
+            
+            <form method="POST" action="Submit">
+                <br>
+                <label>Humidity : </label>
+                <input type="text" name="Humidity" id="oxy" placeholder="Humdidity">
+                <br>
+                <label>Temprature : </label>
+                <input type="text" name="Temprature" id="oxy" placeholder="Temprature Level">
+                <br>
+                <label>Oxygen : </label>
+                <input type="text" name="Oxygen" id="oxy" placeholder="Oxygen Level">
+                <br>
+                <input type="submit" value="Check">
+                <br>
+                <label><br></label>
+            </form>
+        </div>
+        <br>
+        <div>
+            <br>
+            <h1 style="text-align:center;">{{result}}</h1>
+        </div>
+    </body>
+</html>

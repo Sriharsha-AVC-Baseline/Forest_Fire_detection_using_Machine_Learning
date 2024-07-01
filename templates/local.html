@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <style>
+        .video{
+          padding-left: 44%;
+        }
+      </style>
+    </head>
+    <body>
+      <h1 style="text-align:center;">Upload your file</h1>
+      <br>
+            <div class='video'>
+        <form  method='post' enctype='multipart/form-data'>
+            {{form.hidden_tag()}}
+            {{form.file()}}
+            {{form.submit}}
+          </form>
+        </div>
+    </body>
+</html>
